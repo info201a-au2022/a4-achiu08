@@ -1,7 +1,7 @@
 ---
-title: "Your A4 Report Title (TODO: Revise title)"
-author: "Your Name"
-date: '2022-11-01'
+title: "Analyzing Inequalities in the U.S Prison System"
+author: "Alexandria Chiu"
+date: '2022-11-22'
 output: html_document
 ---
 
@@ -11,35 +11,47 @@ source("../source/analysis.R")
 ```
 
 ## Abstract 
-[TODO: Include a short abstract (about 50 words)]
+The United States justice systems are made up of intricate courts that are in charge of bringing justice for U.S citizens and those who reside in the U.S. Furthermore, the U.S tries to achieve justice by standing for non-biased courtrooms however, as humans, people have minds of their own and can bring bias to any courtroom. This can lead to incarcerations of wrongly accused people based on race, gender, and more. 
 
-# Test (TODO: Remove before submission!!)
-```{r echo=FALSE}
-q1_string <- test_query1()
-num <- 5
-```
-As you know, this is a markdown report. The [R Markdown Cheatsheet](https://www.rstudio.com/wp-content/uploads/2015/02/rmarkdown-cheatsheet.pdf) is **useful!**
-
-* Here's a test of a dynamic variable. Say **"`r q1_string`!!!** 
-* Here's another test. A vector
-of numbers: `r test_query2(num)`.
-
-Recall that _{r echo=TRUE}_ can be used to display the code, 
-which is very useful when developing and debugging a report. Here's an example: 
-
-```{r echo=TRUE}
-num <- 5
-sum <- sum(test_query2(num))
-print(sum)
-```
 
 ## Introduction 
-[TODO]
+The Incarceration Trends data set provided by the Vera Institute of Justice shows the total population of each county in the U.S and their demographics. In this report, I would like to focus on how the number of incarcerated black people change over a period of time as well as how different the population is between counties. Throughout U.S history, there have been numerous accounts of hatred towards black people ranging from slavery in the past to police brutality in the present day. All of these acts stem from racism that were used by people in power, who were usually white Americans to assert dominance. Black incarcerated people were often disproportionate because of accounts of being falsely accused, living in areas that are heavily policed, and racial profiling. These data sets can depict a visualization of how racism and power impacted the lives of black people in the U.S. 
 
 ## Data Summary 
-[TODO]
+There are many values recorded in the data set. It's important when looking at data sets to understand the differences in numbers when it comes to inequality between race and gender. Looking at the data set, we can ask, "What year had the highest amount of incarcerated black people?" In 2018, 153,811 total black people were incarcerated `[r high_year]` where Los Angeles, California is where the highest concentration of black people were incarcerated `[r recent_state]`. Historically, black people in the U.S have been racially discriminated against for their skin color which affect every aspect of their life. Racial discrimination also impacts the treatment of people in prison where most often white people have more power over people of color due to the belief that they are the most superior race. As we analyze the number of deaths in prison, we have to compare if certain groups of people have higher death rates than others. By calculating the average number of incarcerated people based on race, we can observe that white people are the most incarcerated with 116.8 in 2018 while AAPI people have the lowest average of 2.4 `[r avg_race]`. 
 
-[TODO ... other sections ... See Canvas for details]
+## Growth of U.S Prision Populations 
+```{r plot_jail_pop_for_us, echo= FALSE, message = FALSE}
+```
 
-_All the very best with your work!_
+*Figure 1.* Growth of U.S Prison Population. This bar chart depicts an increase in the overall prison population between 1970 to 2018. 
+
+We can see that the prison population increases as time goes on. This can be related to overall population growth which can lead to more people being incarcerated. Overall, this graph depicts the general U.S prison population and does not show which demographics are in prison. It's important to recognize if certain groups are in prison more than other groups because these groups can be subject to discrimination based on race, age, or gender. 
+
+## Growth of Prison Population by State
+```{r plot_jail_pop_by_states}
+```
+
+*Figure 2.* Growth of Jail Populations by State. This line graph depicts the growth of jail populations in each state from 1970-2018. 
+
+To start analyzing this data we have to ask ourselves, "how has the population of incarcerated people changed over time?" This graph shows the growth of jail populations in each U.S state. As seen in this graph, California has been the state with the highest population growth since 1970 following Texas and Florida. These states are known to be highly populated which can impact the number of people going to jail in those states. In addition, these states also have a high population of people of color. People of color are more prone to racial discrimination compared to white people and have higher chances of being incarcerated as seen in our previous data analysis. 
+
+
+## Comparing Jail Populations Between Males and Females in 2010-2018
+
+```{r gender_plot}
+```
+*Figure 3.* Comparing different genders and their incarceration in each state between 2010- 2018. 
+
+When analyzing the differences in gender incarceration in each state, we can observe that there is an overall higher population of people who identify as male who are incarcerated compared to females. The graph answers the question, "Is there a difference in number of incarceration between genders?" While the data only shows male and female genders, it's important to think about how gender inequality plays a role in incarceration. The highest value being 15000 males incarcerated in one state compared to 2000 females incarcerated in one state. We can also see that in states such as Arizona, is where there is the highest populations of incarcerated males and females. Despite these numbers, the data lacks information about other genders that are subject to incarceration. 
+
+## Analyzing the Number of People Incarcerated by ICE 
+
+```{r ice_map}
+```
+
+*Figure 4.* This map depicts the number of people incarcerated by ICE in 2018. 
+
+The U.S Immigration and Customs Enforcement (ICE) regulates immigration status in the U.S including enforcement of legal immigration. Some people immigrate to the U.S in order to find opportunities to grow or seek resources that are not available in their countries. Detainment of people by ICE has been a controversial topic because of unethical deportation of people to go back to their country. This raises the question, "In what places in the U.S is where the most people are incarcerated by ICE?" As seen in the map, Texas and Florida have the highest amounts of people who were incarcerated by ICE in 2018. Overall, these states have a disproportionate amount of incarceration compared to the rest of the U.S. 
+
 
