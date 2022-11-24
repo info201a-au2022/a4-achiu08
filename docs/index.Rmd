@@ -18,10 +18,11 @@ The United States justice systems are made up of intricate courts that are in ch
 The Incarceration Trends data set provided by the Vera Institute of Justice shows the total population of each county in the U.S and their demographics. In this report, I would like to focus on how the number of incarcerated black people change over a period of time as well as how different the population is between counties. Throughout U.S history, there have been numerous accounts of hatred towards black people ranging from slavery in the past to police brutality in the present day. All of these acts stem from racism that were used by people in power, who were usually white Americans to assert dominance. Black incarcerated people were often disproportionate because of accounts of being falsely accused, living in areas that are heavily policed, and racial profiling. These data sets can depict a visualization of how racism and power impacted the lives of black people in the U.S. 
 
 ## Data Summary 
-There are many values recorded in the data set. It's important when looking at data sets to understand the differences in numbers when it comes to inequality between race and gender. Looking at the data set, we can ask, "What year had the highest amount of incarcerated black people?" In 2018, 153,811 total black people were incarcerated `[r high_year]` where Los Angeles, California is where the highest concentration of black people were incarcerated `[r recent_state]`. Historically, black people in the U.S have been racially discriminated against for their skin color which affect every aspect of their life. Racial discrimination also impacts the treatment of people in prison where most often white people have more power over people of color due to the belief that they are the most superior race. As we analyze the number of deaths in prison, we have to compare if certain groups of people have higher death rates than others. By calculating the average number of incarcerated people based on race, we can observe that white people are the most incarcerated with 116.8 in 2018 while AAPI people have the lowest average of 2.4 `[r avg_race]`. 
+There are many values recorded in the data set. It's important when looking at data sets to understand the differences in numbers when it comes to inequality between race and gender. Looking at the data set, we can ask, "What year had the highest amount of incarcerated black people?" In 2018, 153,811 total black people were incarcerated `high_year` where Los Angeles, California is where the highest concentration of black people were incarcerated `recent_state`. Historically, black people in the U.S have been racially discriminated against for their skin color which affect every aspect of their life. Racial discrimination also impacts the treatment of people in prison where most often white people have more power over people of color due to the belief that they are the most superior race. As we analyze the number of deaths in prison, we have to compare if certain groups of people have higher death rates than others. By calculating the average number of incarcerated people based on race, we can observe that white people are the most incarcerated with 116.8 in 2018 while AAPI people have the lowest average of 2.4 `avg_race`. 
 
 ## Growth of U.S Prision Populations 
-```{r plot_jail_pop_for_us, echo= FALSE, message = FALSE}
+```{r plot_prison_pop_for_us, echo= FALSE, message = FALSE}
+plot_prison_pop_for_us()
 ```
 
 *Figure 1.* Growth of U.S Prison Population. This bar chart depicts an increase in the overall prison population between 1970 to 2018. 
@@ -29,7 +30,8 @@ There are many values recorded in the data set. It's important when looking at d
 We can see that the prison population increases as time goes on. This can be related to overall population growth which can lead to more people being incarcerated. Overall, this graph depicts the general U.S prison population and does not show which demographics are in prison. It's important to recognize if certain groups are in prison more than other groups because these groups can be subject to discrimination based on race, age, or gender. 
 
 ## Growth of Prison Population by State
-```{r plot_jail_pop_by_states}
+```{r plot_jail_pop_by_states, echo= FALSE, message = FALSE}
+plot_jail_pop_by_states()
 ```
 
 *Figure 2.* Growth of Jail Populations by State. This line graph depicts the growth of jail populations in each state from 1970-2018. 
@@ -39,15 +41,18 @@ To start analyzing this data we have to ask ourselves, "how has the population o
 
 ## Comparing Jail Populations Between Males and Females in 2010-2018
 
-```{r gender_plot}
+```{r gender_plot, echo= FALSE, message = FALSE}
+gender_plot()
 ```
+
 *Figure 3.* Comparing different genders and their incarceration in each state between 2010- 2018. 
 
 When analyzing the differences in gender incarceration in each state, we can observe that there is an overall higher population of people who identify as male who are incarcerated compared to females. The graph answers the question, "Is there a difference in number of incarceration between genders?" While the data only shows male and female genders, it's important to think about how gender inequality plays a role in incarceration. The highest value being 15000 males incarcerated in one state compared to 2000 females incarcerated in one state. We can also see that in states such as Arizona, is where there is the highest populations of incarcerated males and females. Despite these numbers, the data lacks information about other genders that are subject to incarceration. 
 
 ## Analyzing the Number of People Incarcerated by ICE 
 
-```{r ice_map}
+```{r ice_map, echo= FALSE, message = FALSE}
+ice_map
 ```
 
 *Figure 4.* This map depicts the number of people incarcerated by ICE in 2018. 

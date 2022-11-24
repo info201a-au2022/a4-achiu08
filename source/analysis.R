@@ -244,12 +244,6 @@ ggplotly(ice_map)
 #----------------------------------------------------------------------------#
 
 ## Load data frame ---- 
-get_data <- function(num_records=-1) {
-  fname <- "~/Documents/info201/data/incarceration_trends.csv"
-  incarceration_df <- read.csv(fname, nrows=num_records)
-  return(incarceration_df)
-}
-View(get_data)
 
 
 
