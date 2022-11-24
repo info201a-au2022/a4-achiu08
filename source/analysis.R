@@ -53,12 +53,9 @@ avg_race <- data.frame(avg_aapi, avg_black, avg_latinx, avg_native, avg_white, a
 
 # What is the highest amount of incarceration of each race in 2018?
 max_black <- incarceration_df %>% 
-  group_by(state, county_name, year, black_jail_pop) %>%
   filter(year == "2018") %>% 
-  filter(black_jail_pop > 0) %>% 
-  summarise(high_black = max(black_jail_pop, na.rm = TRUE)) %>% 
-  select(high_black)
-
+  summarise(max(black_jail_pop, na.rm = TRUE))
+  
 max_latinx <- incarceration_df %>% 
   group_by(state, county_name, year, latinx_jail_pop) %>%
   filter(year == "2018") %>% 
